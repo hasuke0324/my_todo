@@ -1,0 +1,7 @@
+<div class= "content__title">
+  タスクの編集
+</div>
+<%= form_with model: @task, class: :form, local: true do |form| %>
+  <%= form.text_field :content, placeholder: :タスク, class: :form__content %>
+  <%= form.submit '更新', class: :form__btn %>
+<% end %>
