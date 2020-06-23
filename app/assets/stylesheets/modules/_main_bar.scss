@@ -1,0 +1,20 @@
+.main-bar {
+  width: calc(100vw - 46%);
+  height: 100vh;
+  border-right: 1px solid #DDDDDD;
+  float: left;
+  &__header {
+    height: calc(100% - 93%);
+    border-bottom: 1px solid #DDDDDD;
+    margin: 0 10px;
+  }
+}
+.add_task_box {
+  width: 90%;
+  border: 1px solid;
+  width: 97%;
+  height: 46px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-left: 8px;
+}
