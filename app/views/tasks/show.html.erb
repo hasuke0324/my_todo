@@ -1,8 +1,12 @@
 <div class = "taskContent">
   <%= @task.content%>
 </div>
-<div class = "postDate">
-  <%= @task.created_at %>
+</div>
+<div class = "taskPriority">
+  <%= @task.priority %>
+</div>
+<div class = "taskDeadline">
+  <%= @task.deadline %>
 </div>
 <div class="taskManage">
   <%= link_to "編集", edit_task_path(@task.id), class: "taskManage__edit" %>
