@@ -1,0 +1,13 @@
+<div class= "main-bar">
+  <div class= "main-bar__header">
+    <div class= "main-bar__header-sort">
+      <i class= "fas fa-sort-amount-down icon-sort"></i>
+    </div>
+  </div>
+<%= form_with model: @task, local: true do |form| %>
+  <%= form.text_field :content , class: 'add_task_box', placeholder: '+ タスク追加'%>
+<% end %>
+<% @tasks.each do |task| %>
+  <%= render partial: "task", locals: { task: task} %>
+<% end %>
+</div>
