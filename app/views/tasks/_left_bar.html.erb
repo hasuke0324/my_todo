@@ -13,10 +13,10 @@
         重要・緊急
       </th>
       <th class= "priority__list-count">
-        1
+        <%= @counts["重要・緊急"] %>
       </th>
       <th class= "priority__list-rate">
-        40&#037;
+        <%= number_to_percentage @counts["重要・緊急"].to_f / @tasks.length.to_f * 100, precision: 0 %>
       </th>
     </tr>
     <tr class= "priority__list">
@@ -27,10 +27,10 @@
         重要・緊急ではない
       </th>
       <th class= "priority__list-count">
-        2
+        <%= @counts["重要・緊急ではない"] %>
       </th>
       <th class= "priority__list-rate">
-        30&#037;
+        <%= number_to_percentage @counts["重要・緊急ではない"].to_f / @tasks.length.to_f * 100, precision: 0 %>
       </th>
     </tr>
     <tr class= "priority__list">
@@ -41,10 +41,10 @@
         重要ではない・緊急
       </th>
       <th class= "priority__list-count">
-        3
+        <%= @counts["重要ではない・緊急"] %>
       </th>
       <th class= "priority__list-rate">
-        20&#037;
+        <%= number_to_percentage @counts["重要ではない・緊急"].to_f / @tasks.length.to_f * 100, precision: 0 %>
       </th>
     </tr>
     <tr class= "priority__list">
@@ -55,10 +55,10 @@
         重要ではない・緊急ではない
       </th>
       <th class= "priority__list-count">
-        4
+        <%= @counts["重要ではない・緊急ではない"] %>
       </th>
       <th class= "priority__list-rate">
-        10&#037;
+        <%= number_to_percentage @counts["重要ではない・緊急ではない"].to_f / @tasks.length.to_f * 100, precision: 0 %>
     </th>
     <tr class= "priority__list">
       <th class= "priority__list-star">
@@ -68,10 +68,10 @@
         未設定
       </th>
       <th class= "priority__list-count">
-        0
+        <%= @counts["未設定"] %>
       </th>
       <th class= "priority__list-rate">
-        0&#037;
+        <%= number_to_percentage @counts["未設定"].to_f / @tasks.length.to_f * 100, precision: 0 %>
     </th>
   </table>
 </div>
