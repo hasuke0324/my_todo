@@ -2,8 +2,8 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:edit, :show]
   
   def index
-    @tasks = Task.all
     @task = Task.new
+    @tasks = Task.all
     @counts = Task.group(:priority).count(:priority)
   end
 
@@ -11,8 +11,11 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(task_params)
-    redirect_to root_path
+    @task = Task.create(task_params)
+    respond_to do |format|
+      format.html { redirect_to :root }
+      format.json
+    end
   end
 
   def show
