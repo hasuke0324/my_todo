@@ -1,5 +1,5 @@
 <div class = "taskContent">
-  <%= @task.content%>
+  <%= link_to @task.content, edit_task_path(@task.id) %>
 </div>
 </div>
 <div class = "taskPriority">
@@ -9,6 +9,6 @@
   <%= @task.deadline %>
 </div>
 <div class="taskManage">
-  <%= link_to "編集", edit_task_path(@task.id), class: "taskManage__edit" %>
+  <%# <%= link_to "編集", edit_task_path(@task.id), class: "taskManage__edit" %>
   <%= link_to "削除", task_path(@task.id), method: :delete, class: "taskManage__delete" %>
 </div>
