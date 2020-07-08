@@ -1,9 +1,9 @@
 <li class = "task">
   <div class = "task_delete_btn">
-    ○
+    <%= link_to '○' , task_path(task.id), method: :delete, remote: true %>
   </div>
   <div class = "task_content">
-    <%= link_to task.content, task %>
+    <%= link_to task.content, task%>
   </div>
   <div class = "task_deadline">
     期限: <%= task.deadline %>
