@@ -3,6 +3,7 @@ $(function(){
     var html = `<li class = "task">
     <div class = "task_delete_btn">
       <a data-remote="true" rel="nofollow" data-method="delete" href="/tasks/${task.id}">○</a>
+      <div class = "description">タスク削除</div>
     </div>
     <div class = "task_content">
       <a href =/tasks/${task.id}>${task.content}</a>
