@@ -4,7 +4,7 @@
     <div class = "description">タスク削除</div>
   </div>
   <div class = "task_content">
-    <%= link_to task.content, task%>
+    <%= link_to task.content , edit_task_path(task.id) %>
   </div>
   <div class = "task_deadline">
     期限: <%= task.deadline %>
