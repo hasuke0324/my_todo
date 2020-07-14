@@ -1,41 +1,29 @@
-$(function(){
-  function buildHTML(task){
-    var html = `<li class = "task">
-    <div class = "task_delete_btn">
-      <a data-remote="true" rel="nofollow" data-method="delete" href="/tasks/${task.id}">○</a>
-      <div class = "description">タスク削除</div>
-    </div>
-    <div class = "task_content">
-      <a href =/tasks/${task.id}>${task.content}</a>
-    </div>
-    <div class = "task_deadline">
-      期限:
-    </div>
-    <div class = "task_priority">
-      ${task.priority}
-    </div>
-  </li>`
-    return html;
-  }
-  $('.task_form').on('submit', function(e){
-    e.preventDefault();
-    var formData = new FormData(this);
-    var url = $(this).attr('action')
-    $.ajax({
-      url: url,
-      type: "POST",
-      data: formData,
-      dataType: 'json',
-      processData: false,
-      contentType: false
-    })
-    .done(function(data) {
-      var html = buildHTML(data);
-      $('.task_list').append(html);
-      $('.add_task_box').val('');
-    })
-    .fail(function() {
-      alert('error');
-    })
-  });
-});
+// $(function (){
+//   var InlineEdit;
+//   var values = {id: "", content: "",}
+
+//   $('.task_content').on('click', function (e) {
+//     e.preventDefault();
+//     if(!$(this).hasClass('on')){
+//       $(this).addClass('on');
+//       var content = $(this).text();
+//       $(this).html(`<input type="text" value=${content}>`);
+//       $('.task_content > input').focus().blur(function(){
+//         var url = location.href + "tasks/" + task.id;
+//         var inputVal = $(this).val();
+//         $.ajax({
+//           url: url,
+//           type: 'POST',
+//           data: { 'id': task.id,'content': inputVal, '_method': 'PATCH'},
+//           dataType: 'json',
+//           processData: false,
+//           contentType: false
+//         })
+//         if(inputVal===''){
+//           inputVal = this.defaultValue;
+//       };
+//         $(this).parent().removeClass('on').text(inputVal);
+//       });
+//     }
+//   });
+// });

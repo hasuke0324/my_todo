@@ -1,0 +1,27 @@
+.edit__content {
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #555;
+}
+.content__title {
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+.form__content {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#task_priority {
+  height: 30px;
+  margin-bottom: 20px;
+}
+.form__deadline {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form__btn {
+  display: block;
+  margin: 0 auto;
+}

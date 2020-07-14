@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:edit, :show]
+  before_action :set_task, only: [:edit]
   
   def index
     @tasks = Task.all
@@ -12,10 +12,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create(task_params)
-    respond_to do |format|
-      format.html { redirect_to :root }
-      format.json
-    end
+    redirect_to root_path
   end
 
   def show

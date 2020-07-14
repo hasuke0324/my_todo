@@ -1,7 +1,7 @@
 $(function(){
   $('task_delete_btn').on('click', function(e){
     e.preventDefault();
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
 
     $.ajax({
       url: "/tasks/" + TaskID,

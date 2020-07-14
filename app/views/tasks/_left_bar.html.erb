@@ -59,7 +59,8 @@
       </th>
       <th class= "priority__list-rate">
         <%= number_to_percentage @counts["重要ではない・緊急ではない"].to_f / @tasks.length.to_f * 100, precision: 0 %>
-    </th>
+      </th>
+    </tr>
     <tr class= "priority__list">
       <th class= "priority__list-star">
         <i class="fa fa-star-o icon05" aria-hidden="true">
@@ -72,6 +73,7 @@
       </th>
       <th class= "priority__list-rate">
         <%= number_to_percentage @counts["未設定"].to_f / @tasks.length.to_f * 100, precision: 0 %>
-    </th>
+      </th>
+    </tr>
   </table>
 </div>
