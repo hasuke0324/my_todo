@@ -1,15 +1,15 @@
 <div class= "main-bar">
-  <div class= "main-bar__header">
-    <div class= "main-bar__header-sort">
-      <i class= "fas fa-sort-amount-down icon-sort"></i>
-    </div>
+  <div class= "main-bar__header"></div>
+  <div class= "main-bar__body">
+    <ul class = "task_list">
+      <% @tasks.each do |task| %>
+        <%= render partial: "task", class: 'task_list', locals: { task: task} %>
+      <% end %>
+    </ul>
   </div>
-<%= form_with model: @task, class: 'task_form', local: true do |form| %>
-  <%= form.text_field :content , class: 'add_task_box', placeholder: '+ タスク追加'%>
-<% end %>
-<ul class = "task_list">
-  <% @tasks.each do |task| %>
-    <%= render partial: "task", class: 'task_list', locals: { task: task} %>
-  <% end %>
-</ul>
+  <div class= "main-bar__hooter">
+   <%= form_with model: @task, class: 'task_form', local: true do |form| %>
+      <%= form.text_field :content , class: 'add_task_box', placeholder: '+ タスク追加'%>
+    <% end %>
+  </div>
 </div>

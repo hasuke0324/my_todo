@@ -1,12 +1,22 @@
 .main-bar {
   width: calc(100vw - 21%);
   height: 100vh;
-  border-right: 1px solid #DDDDDD;
   float: left;
   &__header {
     height: calc(100% - 93%);
-    border-bottom: 1px solid #DDDDDD;
     margin: 0 10px;
+  }
+  &__body {
+    height: calc(100% - 19%);
+    overflow: scroll;
+    background-image:url("/assets/photoc.jpeg");
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;
+    padding-top: 22px;
+  }
+  &__hooter {
+    height: calc(100% - 88%);
+    background-color: #eeeeee;
   }
 }
 .add_task_box {
@@ -14,7 +24,10 @@
   border: 1px solid;
   width: 97%;
   height: 46px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 18px;
+  margin-top: 13px;
   padding-left: 8px;
+}
+li {
+  background-color: #f5f5f5;
 }
