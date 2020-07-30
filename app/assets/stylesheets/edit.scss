@@ -1,27 +1,103 @@
+.edit__header {
+  width: 100%;
+  height: 5vh;
+  background-color:#f5f5f5;
+}
+.edit__main {
+  width: 100%;
+  height: 90vh;
+  background-color:#f5f5f5;
+  &__space {
+    height: 100%;
+    margin-left: 300px;
+    margin-right: 300px;
+    align-items: center;
+    background-image: url("/assets/photob.jpeg");
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;
+    position: relative;
+  }
+}
 .edit__content {
-  width: 400px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 2px solid #555;
+  width: 500px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  padding: 30px ;
+  background-color: #ffffff;
+  font-weight: 600;
 }
 .content__title {
   text-align: center;
+  color: #888888;
   border-bottom: 1px solid gray;
   margin-bottom: 20px;
+  font-size: 16px;
+}
+.task__edit {
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 .form__content {
   width: 100%;
   margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  color: #333333;
+}
+.priority__edit {
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 #task_priority {
-  height: 30px;
+  width: 100%;
   margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  color: #333333;
+}
+.deadline__edit {
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 .form__deadline {
   width: 100%;
   margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  color: #333333;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
 }
 .form__btn {
-  display: block;
-  margin: 0 auto;
+  margin-top: 24px;
+  background-color: #cccccc;
+  color: #222222;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  width: 100%;
+  font-size: 17px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+}
+.edit__hooter {
+  width: 100%;
+  height: 5vh;
+  background-color:#f5f5f5;
 }

@@ -1,11 +1,20 @@
-<div class= "edit__content">
-  <div class= "content__title">
-    タスクの編集
+<div class= "edit__header"></div>
+<div class= "edit__main">
+  <div class= "edit__main__space">
+    <div class= "edit__content">
+      <div class= "content__title">
+        タスクの編集
+      </div>
+      <%= form_with model: [@task], class: :form, local: true do |f| %>
+        <div class= "task__edit">タスク名</div>
+        <%= f.text_field :content, placeholder: :タスク, class: :form__content %>
+        <div class= "priority__edit">優先度</div>
+        <%= f.select :priority, {未設定: "未設定",重要・緊急: "重要・緊急",重要・緊急ではない: "重要・緊急ではない",重要ではない・緊急: "重要ではない・緊急",重要ではない・緊急ではない: "重要ではない・緊急ではない"} %>
+        <div class= "deadline__edit">期限日</div>
+        <%= f.date_field :deadline, class: :form__deadline %>
+        <%= f.submit '更新', class: :form__btn %>
+      <% end %>
+    </div>
   </div>
-  <%= form_with model: [@task], class: :form, local: true do |f| %>
-    <%= f.text_field :content, placeholder: :タスク, class: :form__content %>
-    <%= f.select :priority, {未設定: "未設定",重要・緊急: "重要・緊急",重要・緊急ではない: "重要・緊急ではない",重要ではない・緊急: "重要ではない・緊急",重要ではない・緊急ではない: "重要ではない・緊急ではない"}, class: :form__priority %>
-    <%= f.date_field :deadline, class: :form__deadline %>
-    <%= f.submit '更新', class: :form__btn %>
-  <% end %>
 </div>
+<div class = "edit__hooter"></div>
