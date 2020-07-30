@@ -1,0 +1,13 @@
+%li.task
+  .task__delete
+    = link_to '○' , task_path(task.id), method: :delete, remote: true
+    .task__delete__description
+      タスク削除
+  .task__content
+    = link_to task.content , edit_task_path(task.id)
+  .task__deadline
+    %span.task__deadline__tag
+    期限:
+    = link_to task.deadline , edit_task_path(task.id)
+  .task__priority
+    = link_to task.priority , edit_task_path(task.id)

@@ -4,47 +4,47 @@
   height: 46px;
   margin: 10px 18px;
   position: relative;
-    &_delete_btn {
+    &__delete {
       position: absolute;
       left: 5px;
       top: 5px;
       font-size: 20px;
       cursor: pointer;
       display: inline-block;
+      &__description {
+        display: none;
+        position: absolute;
+        padding: 10px;
+        font-size: 10px;
+        line-height: 1.6em;
+        color: #fff;
+        background: gray;
+        width: 70px;
+      }
+      &__description:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 55%;
+        border: 10px solid transparent;
+        border-top: 10px solid gray;
+        margin-left: -15px;
+      }
     }
-    .description {
-      display: none;
-      position: absolute;
-      padding: 10px;
-      font-size: 10px;
-      line-height: 1.6em;
-      color: #fff;
-      background: gray;
-      width: 70px;
-    }
-    .description:before {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 55%;
-      border: 10px solid transparent;
-      border-top: 10px solid gray;
-      margin-left: -15px;
-    }
-    &_delete_btn:hover .description{
+    &__delete:hover .task__delete__description{
       display: inline-block;
       top: -43px;
       left: -23px;
     }
-    &_content {
+    &__content {
       padding-left: 40px;
     }
-    &_deadline {
+    &__deadline {
       color: gray;
       font-size: 13px;
       padding-left: 40px;
     }
-    &_priority {
+    &__priority {
       color: gray;
       font-size: 13px;
       position: absolute;

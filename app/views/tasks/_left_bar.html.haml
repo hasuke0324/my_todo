@@ -1,0 +1,41 @@
+.left__bar
+  .left__bar__header
+    .left__bar__header__user-name
+      test
+  .left__bar__main
+    %table.priority
+      %tr.priority__list
+        %th.priority__list-name
+          重要・緊急
+        %th.priority__list-count
+          = @counts["重要・緊急"]
+        %th.priority__list-rate
+          = number_to_percentage @counts["重要・緊急"].to_f / @tasks.length.to_f * 100, precision: 0
+      %tr.priority__list
+        %th.priority__list-name
+          重要・緊急ではない
+        %th.priority__list-count
+          = @counts["重要・緊急ではない"]
+        %th.priority__list-rate
+          = number_to_percentage @counts["重要・緊急ではない"].to_f / @tasks.length.to_f * 100, precision: 0
+      %tr.priority__list
+        %th.priority__list-name
+          重要ではない・緊急
+        %th.priority__list-count
+          = @counts["重要ではない・緊急"]
+        %th.priority__list-rate
+          = number_to_percentage @counts["重要ではない・緊急"].to_f / @tasks.length.to_f * 100, precision: 0
+      %tr.priority__list
+        %th.priority__list-name
+          重要ではない・緊急ではない
+        %th.priority__list-count
+          = @counts["重要ではない・緊急ではない"]
+        %th.priority__list-rate
+          = number_to_percentage @counts["重要ではない・緊急ではない"].to_f / @tasks.length.to_f * 100, precision: 0
+      %tr.priority__list
+        %th.priority__list-name
+          未設定
+        %th.priority__list-count
+          = @counts["未設定"]
+        %th.priority__list-rate
+          = number_to_percentage @counts["未設定"].to_f / @tasks.length.to_f * 100, precision: 0

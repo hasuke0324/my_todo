@@ -1,4 +1,4 @@
-.main-bar {
+.main__bar {
   width: calc(100vw - 21%);
   height: 100vh;
   float: left;
@@ -19,7 +19,7 @@
     background-color: #eeeeee;
   }
 }
-.add_task_box {
+.add__task{
   width: 90%;
   border: 1px solid;
   width: 97%;

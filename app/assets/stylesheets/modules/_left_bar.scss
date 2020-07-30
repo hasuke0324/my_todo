@@ -1,8 +1,8 @@
-.left-bar {
+.left__bar {
   width: calc(100% - 79%);
   height: 100vh;
   float: left;
-  .header {
+  &__header {
     height: calc(100% - 93%);
     padding-left: 10px;
     background-color: #cccccc;
@@ -17,7 +17,7 @@
       color: #333333;
     }
   }
-  .main {
+  &__main {
     height: calc(100% - 7%);
     background-color: #cccccc;
     padding-top: 15px;
@@ -26,14 +26,13 @@
     margin-left: 5px;
     &__list {
       margin: 30px 40px;
-      &-star {
-        padding: 10px;
-      }
       &-name {
         font-size: 13px;
         color: #333333;
         text-align: left;
         font-weight:normal;
+        padding-left: 22px;
+        padding-bottom: 16px;
       }
       &-count {
         font-size: 13px;
@@ -48,18 +47,6 @@
         padding-left: 13px;
         text-align: right;
         font-weight:normal;
-      }
-      .icon01 {
-        color: #FF3333;
-      }
-      .icon02 {
-        color: #FF6633;
-      }
-      .icon03 {
-        color: #66CCFF;
-      }
-      .icon04 {
-        color: #9933FF;
       }
     }
   }
