@@ -26,13 +26,13 @@
   padding: 30px ;
   background-color: #ffffff;
   font-weight: 600;
-}
-.content__title {
-  text-align: center;
-  color: #888888;
-  border-bottom: 1px solid gray;
-  margin-bottom: 20px;
-  font-size: 16px;
+  &__title {
+    text-align: center;
+    color: #888888;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 }
 .task__edit {
   color: #333333;
@@ -48,11 +48,6 @@
   padding: 0 16px;
   color: #333333;
 }
-.priority__edit {
-  color: #333333;
-  font-size: 14px;
-  margin-bottom: 16px;
-}
 #task_priority {
   width: 100%;
   margin-bottom: 20px;
@@ -61,11 +56,6 @@
   height: 48px;
   padding: 0 16px;
   color: #333333;
-}
-.deadline__edit {
-  color: #333333;
-  font-size: 14px;
-  margin-bottom: 16px;
 }
 .form__deadline {
   width: 100%;

@@ -1,0 +1,18 @@
+.edit__header
+.edit__main
+  .edit__main__space
+    .edit__content
+      .edit__content__title
+        タスクの編集
+      = form_for @task do |f|
+        .task__edit
+          タスク名
+        = f.text_field :content, placeholder: :タスク, class: :form__content
+        .task__edit
+          優先度
+        = f.select :priority, {未設定: "未設定",重要・緊急: "重要・緊急",重要・緊急ではない: "重要・緊急ではない",重要ではない・緊急: "重要ではない・緊急",重要ではない・緊急ではない: "重要ではない・緊急ではない"}
+        .task__edit
+          期限日
+        = f.date_field :deadline, class: :form__deadline
+        = f.submit '更新', class: :form__btn
+.edit__hooter
