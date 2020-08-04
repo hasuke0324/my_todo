@@ -1,7 +1,7 @@
 .left__bar
   .left__bar__header
     .left__bar__header__user-name
-      test
+      = link_to current_user.name, edit_user_path(current_user)
   .left__bar__main
     %table.priority
       %tr.priority__list

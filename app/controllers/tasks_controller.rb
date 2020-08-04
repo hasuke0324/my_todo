@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:edit]
   
   def index
-    @tasks = Task.all
+    @tasks = Task.includes(:user)
     @task = Task.new
     @counts = Task.group(:priority).count(:priority)
   end
@@ -35,7 +35,7 @@ class TasksController < ApplicationController
   
   private
   def task_params
-    params.require(:task).permit(:content, :priority, :deadline)
+    params.require(:task).permit(:content, :priority, :deadline).merge(user_id: current_user.id)
   end
 
   def set_task
