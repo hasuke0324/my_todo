@@ -32,7 +32,7 @@ class TasksController < ApplicationController
     task.destroy
     redirect_to root_path
   end
-  
+
   private
   def task_params
     params.require(:task).permit(:content, :priority, :deadline).merge(user_id: current_user.id)
