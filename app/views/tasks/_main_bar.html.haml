@@ -6,4 +6,4 @@
         = render partial: "task", class: 'task__list', locals: { task: task}
   .main__bar__hooter
     = form_for [@task] ,class: 'task_form', local: true do |f|
-      = f.text_field :content , class: 'add__task', placeholder: '+ タスク追加'
+      = f.text_field :content , class: 'add__task', placeholder: '+ タスク追加', autocomplete: "off"
