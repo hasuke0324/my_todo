@@ -7,7 +7,7 @@
     = link_to task.content , edit_task_path(task.id)
   .task__deadline
     %span.task__deadline__tag
-    期限:
-    = link_to task.deadline , edit_task_path(task.id)
+    期限: 
+    = task.deadline
   .task__priority
     = link_to task.priority , edit_task_path(task.id)
