@@ -7,7 +7,7 @@
       = form_for @task do |f|
         .task__edit
           タスク名
-        = f.text_field :content, placeholder: :タスク, class: :form__content
+        = f.text_field :content, placeholder: :タスク, class: :form__content, autocomplete: "off"
         .task__edit
           優先度
         = f.select :priority, {未設定: "未設定",重要・緊急: "重要・緊急",重要・緊急ではない: "重要・緊急ではない",重要ではない・緊急: "重要ではない・緊急",重要ではない・緊急ではない: "重要ではない・緊急ではない"}
