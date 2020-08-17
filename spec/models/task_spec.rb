@@ -7,7 +7,7 @@ RSpec.describe Task, type: :model do
         expect(build(:task, deadline: nil)).to be_valid
       end
     end
-  
+
     context 'taskを保存できない場合' do
       it 'contentが空だと保存できないこと' do
         task = build(:task, content: nil)

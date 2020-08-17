@@ -4,8 +4,8 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   root to: 'tasks#index'
-  resources :users, only: [:edit, :update]
+  resources :users, only: %i[edit update]
   resources :tasks, except: [:index] do
-    resources :priority, only: [:show, :edit]
+    resources :priority, only: %i[show edit]
   end
 end
