@@ -1,6 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:edit]
-  
+
   def index
     @tasks = Task.includes(:user)
     @task = Task.new
@@ -19,6 +18,7 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id])
   end
 
   def update
@@ -38,7 +38,4 @@ class TasksController < ApplicationController
     params.require(:task).permit(:content, :priority, :deadline).merge(user_id: current_user.id)
   end
 
-  def set_task
-    @task = Task.find(params[:id])
-  end
 end
