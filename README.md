@@ -2,15 +2,15 @@
 「重要性」と「緊急性」を軸にあなたのタスクを管理するアプリです。
 
 # 概要
-長期的な目標を立てる、身体を鍛える、ルーティーンで発生している業務を無くす仕組みづくり等、やらなければいけないとわかっていてもついつい後回しになりがちな
+長期的な目標を立てる、身体を鍛える、ルーティーンで発生している業務を無くす仕組みづくり等、やらなければいけないとわかっていてもついつい後回しになりがちな  
 「重要だけど緊急性は低い」タスクにどれだけ時間を使えているかを視覚化することで、日々の改善に繋がるアプリです。
 
 ## デモ
-タスクを追加すると画面左「未設定」のカウントが変わります。
+タスクを追加すると画面左「未設定」のカウントが変わります。  
 [![Image from Gyazo](https://i.gyazo.com/e215bb09632769c9a9cded798feca578.gif)](https://gyazo.com/e215bb09632769c9a9cded798feca578)
 
-編集画面から優先度を選択するとトップページ画面左のカウントが変わります。
-[![Image from Gyazo](https://i.gyazo.com/8fbc4d47db0779c2443462b3c2298fd7.gif)](https://gyazo.com/8fbc4d47db0779c2443462b3c2298fd7)
+編集画面から優先度を選択するとトップページ画面左のカウントが変わります。  
+[![Image from Gyazo](https://i.gyazo.com/652bd015b2b1015b11b6a5893ffd56e3.gif)](https://gyazo.com/652bd015b2b1015b11b6a5893ffd56e3)
 
 # 機能
 * ユーザー登録とログイン(ゲスト閲覧用ログイン有)
@@ -38,6 +38,7 @@
 # DB設計
 ## usersテーブル
 |Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, unique:true|
 |email|string|null: false, unique:true|
 |password|string|null: false, unique:true|
@@ -46,6 +47,7 @@
 
 ## tasksテーブル
 |Column|Type|Options|
+|------|----|-------|
 |content|text|null: false|
 |priority|string||
 |deadline|date||
@@ -54,5 +56,5 @@
 - belongs_to: user
 
 # ライセンス
-This project is licensed free.
+This project is licensed free.  
 ご自由にご利用ください
