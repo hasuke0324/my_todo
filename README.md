@@ -33,7 +33,7 @@ http://175.41.230.217/users/sign_in
 * インフラ : AWS
 * WEBサーバー : Nginx
 * Devise : ログイン機能
-* ajax : タスク削除
+* ajax : タスク追加と削除
 * RSpec : テストコード
 * コードレビュー : Rubocop
 * 自動デプロイ : Capistrano
